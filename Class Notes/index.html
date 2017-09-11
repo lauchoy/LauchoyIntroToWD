@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- comments: ctrl + / -->
+
+<head>
+    <!-- title tag is required. the title shows up in the browser 
+	toolbar/tab, seach engine results, and bookmarks -->
+    <title>Jimmy's HTML Page</title>
+    <!-- charset attribute specific characer encoring for the html 
+    document, failure to do so may result in wonky font rendering -->
+    <meta charset="utf-8" />
+    <!-- optional meta tags, help with SEO -->
+    <meta name="description" content="A sample description for the 
+	search engines" />
+    <meta name="keywords" content="HTML,CSS,tutorial" />
+    <meta name="author" content="Jimmy Lauchoy" />
+    <!-- this is where we would link to external/internal script 
+    files, or links to css docs -->
+</head>
+
+<body>
+    <hr id="top"><p>This is a page with some basic HTML elements. We will update as the tutorial progresses.</p>
+    
+    <!-- Header Tags h1-h6 and h1 is the most important heading and there should only be one per page -->
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+    <p>This is a paragraph</p>
+    <p>This is another paragraph. <strong>But this sentence is bold because
+ 	it is more important content wise and is wrapped in a strong tag.</strong></p>
+    <p>This is yet another paragraph. This time we wrapped <em>these words</em> in an em tag to emphasize</p>
+    <p>This is another paragraph
+        <br/>with
+        <br/>line
+        <br/>breaks.</p>
+    <p>This paragraph has some <small>small text</small> in it.</p>
+    <p>This is an ordered list.</p>
+    <ol>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ol>
+    <p>This is an unordered list</p>
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+    <p>Here is a sample image tag. This is a self closing tag and it has a source attribute.</p>
+    <!-- Use alt for alternative text descriptions and title for image titles for accessible web -->
+    <img src="https://i.pinimg.com/736x/57/4a/6b/574a6b67345ee4fb869aa1ce57a2d32d--cutest-baby-animals-adorable-animals.jpg"/
+    alt="Baby goat cute picture from Google image results. Hard coded URL." title="cute baby goat">
+    <br>
+    <img src="img/cute-fluffy-alpaca.jpg" alt="Baby alpaca with local url. We use /foldernames/file.names just like in terminal." 
+    title="baby alpaca"/>
+    <hr>
+    <!-- anchor tags -->
+    <br>
+    <!-- use "_blank" to open links in a new tab -->
+    <a href="https://www.google.com/" target="_blank">This anchor tab will open a link to google in a new window.</a>
+    <br>
+    <a href="#top">This link will jump to the hr element on the top of the page with the ID of top. This is a named anchor.</a>
+    <a href="img/cute-fluffy-alpaca.jpg">This will link to another file inside our site/server.</a>
+
+    <br><br>
+</body>
+
+</html>
