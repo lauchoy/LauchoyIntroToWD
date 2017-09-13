@@ -1,0 +1,1 @@
+Notes for Mon 09/11/17
