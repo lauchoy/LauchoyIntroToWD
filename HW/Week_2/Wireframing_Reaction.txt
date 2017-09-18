@@ -1,0 +1,7 @@
+Jimmy Lauchoy
+Homework: Week 2
+Five Important Considerations for Wireframing Reaction
+
+Getting started with a project is one of the biggest challenges that I personally face: too many things I want to implement but no foundation or solid framework that I want to work off of. I actually never heard of wireframing in terms of app/web design, but now I know that it is an important skill that designers and developers maintain to help them get started with their projects. 
+I think a lot of people struggle with building user experiences that are authentic, and it’s not that they are bad at designing or don’t have a vision for their project. The bullet points are some definite questions that I and other UX designers should consider before starting a project, because you gain valuable insight for what your product is going to be. 
+Reaching out to others for constructive feedback has always been an option and nowadays it’s easier than ever to ask others to see your progress. Showing demos of your project helps you understand how others will interact with your product and gives you ideas on features that you want to add or modify. 
