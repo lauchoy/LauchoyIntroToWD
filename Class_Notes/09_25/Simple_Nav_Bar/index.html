@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Simple Horizontal Nav Bar</title>
+	<style type="text/css">
+	body{
+		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		margin: 0px;
+	}
+	ul.menu{
+		/*hide the bullet points*/
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		background-color: #888;
+	}
+	li{
+		/*float: left;*/	
+		display: inline-block;
+	}
+	/*only apply this style to anchor tags within a list items*/
+	li a {
+		/*anchor tags by default display inline, here we will tell them to behave like block level elements*/
+		display: block;
+		text-align: center;
+		width: 100px;
+		padding: 10px;
+		text-decoration: none;
+		color: #333;
+	}
+
+	li a::hover{
+		background-color: #111;
+		color: #fff;
+	}
+
+	li a.active{
+		background color: #777;
+	}
+	</style>
+</head>
+<body>
+	<ul class="menu">
+		<li><a href='#'>Home</a></li>
+		<li><a href='#'>News</a></li>
+		<li><a href='#'>Contact</a></li>
+		<li><a href='#'>About</a></li>
+	</ul>
+</body>
+</html>

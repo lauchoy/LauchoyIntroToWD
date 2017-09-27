@@ -1,0 +1,2 @@
+Week 2 homework which consists of a reaction to an article, a mockup of a recipe page, and an attempt to create a basic HTML page of the mockup.
+Since my page mockup relies on centering every block element including the nav bar, it was difficult to use exclusively HTML to create the look I wanted. 
