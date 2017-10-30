@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Input Simple Example</title>
+	<style type="text/css">
+		.red{
+			color: red;
+		}
+		.blue{
+			color:blue;
+		}
+		.green{
+			color: green;
+		}
+		.purple{
+			color: rebeccapurple;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="changeMe">Get User Input</h1>
+	<form>
+		<fieldset>
+			<legend>Pick a Number between 0 and 3</legend>
+			<!-- input type of number and min max and step for input control -->
+			<input type="number" id="num" name="num" min="0" max="3" step="0">
+			<button type="button" id="changeBtn" class="btnClass" > Click to change the color class of the H1</button>
+		</fieldset>
+	</form>
+	<script type="text/javascript">
+		document.addEbentListener('DOMContentLoeaded', function(event){
+			var myBtn = document.getElementById('changeBtn');
+			myBtn.addEventListener('click', function(e){
+				var userN = document.getElementById('num');
+				//even though the input was type number the value ame in as a string
+				console.log(typeof(userN.value));
+				var n = parseInt(userN.value);
+				console.log(typeof(n));
+				//if we have a bunch of conditionals that check one condition
+				//use a switch statement
+				var h - document.getElementById('changeMe');
+				switch(n){
+					case 0:
+						h.className = 'red';
+						break;
+				
+					case 1:
+						h.className = 'blue';
+						break;
+									
+					case 2:
+						h.className = 'green';
+						break;
+				
+					case 3:
+						h.className = 'green';
+						break;
+					//if none of the above cases are met
+					default;
+				}
+			});
+		});
+	</script>
+
+</body>
+</html>
