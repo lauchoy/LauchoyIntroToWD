@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JSON 101</title>
+</head>
+<body>
+<script type="text/javascript">
+	// var customer = {
+	// 	firstName: 'Tony',
+	// 	lastName: 'Pony',
+	// 	pets: ['dog','cat','iguana']
+	// };
+	// //accessing key value pairs with dot notation
+	// console.log(customer.firstName);
+	// //get lastname with square brackets and a string
+	// console.log(customer['lastName']);
+	// //access the second pet in the array
+	// console.log(customer.pets[1]);
+	// //log out al of our customers pets
+	// for (var i = 0; i < customer.pets.length;i++){
+	// 	console.log(customer.pets[i]);
+	// }
+	// customer.age = 45;
+	// console.log(customer);
+	var myClass = { 
+	me: {
+		firstName: "Tony",
+		lastName: "Pony",
+		pets: ["Dog", "Cat", "Iguana"]
+	},
+	others: [
+		{
+		firstName: "Sally",
+		lastName: "Omally",
+		pets: ["ButterFly", "Bird"]
+		},
+		{
+		firstName: "Billy",
+		lastName: "Goat",
+		pets: ["Snake", "Fish"]
+		},
+		{
+		firstName: "Tara",
+		lastName: "Ohara",
+		pets: ["Gecko", "Lizard"]
+		}
+	]
+};
+	console.log(myClass.me.pets[2]);
+	console.log(myClass.others[1].lastName);
+	console.log(myClass.others.length);
+	for (var i = 0; i < myClass.others.length;i++){
+		var others = myClass.others
+		console.log(others[i].firstName);
+	}
+	console.log(myClass.others[2].pets[0]);
+
+
+</script>
+
+</body>
+</html>
+
+<!-- 	1- Tony’s third pet
+	2- Billy’s last name
+	3- The size of the others array
+	4- The first name of everyone in the others array (for loop and array.length is needed)
+	5- Tara’s first pet -->
