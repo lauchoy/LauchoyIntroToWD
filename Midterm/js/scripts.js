@@ -1,3 +1,4 @@
+
 var docID = document.getElementsByTagName("body")[0].getAttribute("id");
 
 //integrate automatic + manual slideshow playing for homepage
@@ -66,3 +67,8 @@ if (docID == "video" || docID == "photo"){
 }
 
 
+$(document).ready(function (){
+        $('#toggleMe').click(function(){
+          $('.card:first').toggle();
+        });
+      });

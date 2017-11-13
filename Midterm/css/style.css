@@ -303,6 +303,28 @@ https://www.w3schools.com/howto/howto_js_slideshow.asp
 	font-family: 'Chathura', sans-serif;
 }
 
+.btn-toggle{
+	font-size: 2.5em;
+	font-family: 'Chathura', sans-serif;
+	text-decoration: none;
+	position: relative;
+	margin: 0 auto;
+	display: inline-block;
+
+	margin-left: 50px;
+}
+
+.dropdown{
+	display: none;
+	margin-left: 50px;
+}
+
+.dropdown ul li{
+	font-size: 2.5em;
+	font-family: 'Chathura', sans-serif;
+	text-decoration: none;
+}
+	
 /* =============================================================================
    VIDEOGRAPHY PAGE
    ========================================================================== */
