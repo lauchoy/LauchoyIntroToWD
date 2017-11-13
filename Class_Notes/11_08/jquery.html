@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+    <h1>Hello, jQuery!</h1>
+    <p id="mouseMe">This is a paragraph with mouse enter and mouse leave events attached in jQuery</p>
+    <button class="btn btn-default" id="dblClickMe">Double Click for Event!</button>
+    <button class="btn btn-danger" id="hideMe">Hide</button>
+    <button class="btn btn-success" id="showMe">Show</button>
+    <button class="btn btn-warning" id="toggleMe">Toggle Hide Show</button>
+    <div class="card">
+      This is a div that will hide and show. we are going to use the selector 
+      <code>
+        $('.well:first')
+      </code>
+    </div>
+  </div>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        //multiple event listener with parameter object
+        $('#mouseMe').on({
+          mouseenter: function(){
+            console.log("mouse entered the paragraph element!");
+          },
+          mouseleave: function(){
+            console.log("mouse left the paragraph element...");
+          }
+        });
+        $('#dblClickMe').dblClickMe(function(){
+          alert('Double Click')
+        });
+        $('#hideMe').hideMe(function(){
+
+        });
+        $('#showMe').showMe(function(){
+
+        });
+        $('#toggleMe').toggleMe(function(){
+
+        });
+
+      });
+    </script>
+  </body>
+
+</html>

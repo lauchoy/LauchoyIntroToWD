@@ -67,8 +67,3 @@ if (docID == "video" || docID == "photo"){
 }
 
 
-$(document).ready(function (){
-        $('#toggleMe').click(function(){
-          $('.card:first').toggle();
-        });
-      });
