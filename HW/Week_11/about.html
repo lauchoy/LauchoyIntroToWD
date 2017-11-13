@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>About - Lauchoy Photo</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Carrois+Gothic+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Text+Me+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chathura" rel="stylesheet">
+<!--     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+ -->
+</head>
+
+<body>
+    <h1 class="title"> JIMMY LAUCHOY</h1>
+        <nav id="main-nav">
+            <ul class="clear-fix">
+                <li><a target="_blank" href="img/Jimmy_Lauchoy_Resume.pdf">CONTACT</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="#">PORTFOLIO</a>
+                    <ul>
+                        <li><a href="photo.html">PHOTOGRAPHY</a></li>
+                        <li><a href="video.html">VIDEOGRAPHY</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html">HOME</a></li>
+            </ul>
+        </nav>
+        <a class = "insta" target="_blank" href="https://instagram.com/night_aul"><i class="fa fa-instagram fa-2" aria-hidden="true"></i></a>
+
+
+    <div class="bg fade">
+        <img src="img/city-7.jpg" style="width:100%" class="bgPhoto">
+    </div>
+    <div class="color_layer"></div>
+    <img src="img/pfp.jpg" style="width:20%" class="pic">
+    <div class="heading">
+        <p>ABOUT ME</p>
+    </div>
+    <div class="description">
+        <p>Jimmy Lauchoy is a self-taught creative artist raised in NYC. He currently attends NYU studying Computer Science, with a minor in Integrated Digital Media. He spends most of his free time exploring the city and planning shoots with friends or clients. He is known for his vibrant landscape photographs and striking portraits, as well as his ability to experiment with various light forms such as off-camera lighting and light painting. He is actively looking for opportunities to collaborate with other creative artists and to share his art form with others. </p>
+    </div>
+    <div class = "buttons">
+        <button class = "btn-toggle" id="edu">Education</button>
+        <div class="dropdown" id="education">
+            <ul>
+                <li>New York University</li>
+                <li>Computer Science Major</li>
+                <li>Class of 2019</li>
+            </ul>
+        </div>
+        <button class = "btn-toggle" id="equip">Equipment</button>
+        <div class="dropdown" id="equipment">
+            <ul>
+                <li>Nikon d5200</li>
+                <li>Sigma 18-35mm f1.8 Art</li>
+                <li>Nikon 35mm f/1.8G DX</li>
+                <li>Nikon 50mm f/1.8D</li>
+                <li>Adobe Lightroom CC</li>
+                <li>Adobe Photoshop CC</li>
+            </ul>
+        </div>
+    </div>
+    <br>
+</body>
+<script src="js/scripts.js"></script>
+<script src="js/modernizr-2.6.2.min.js"></script>
+<script src="https://use.fontawesome.com/ddf39ca00f.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    $(document).ready(function (){
+        $('#edu').click(function(){
+          $('#education:first').toggle();
+        });
+    });
+    $(document).ready(function (){
+        $('#equip').click(function(){
+          $('#equipment:first').toggle();
+        });
+    });
+</script>
+
+</html>
