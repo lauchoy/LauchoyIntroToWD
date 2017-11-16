@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GSAP 101</title>
+	<style type="text/css">
+		#sb{
+			position: absolute;
+			top: 500px;
+			left: 0;
+		}
+	</style>
+</head>
+<body>
+	<img src="img/soccer-ball.png" id="sb"/>
+	<img src="img/basket-ball.png" id="bball"/>
+	<img src="img/basket-ball.png" id="bball"/>
+	<img src="img/basket-ball.png" id="bball"/>
+	<img src="img/basket-ball.png" id="bball"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+	<script type="text/javascript">
+		// we write all animation scripts here after gsap loads
+		//grab our soccerball by id
+		var sb = document.getElementById('sb');
+		//using the TWEENMAX object to animate over 3 seconds and change position with an ease
+		// TweenMax.to(sb,3,{left: 800, top: 300});
+		TweenMax.to(sb,3,{x: 800, y:-500, rotation:360, ease:Elastic.easeOut});
+
+		//grab the array of bballs with same class
+		TweenMax.staggerTo('.bball', 1, {y:500, rotation:720, delay:1, ease:Bounce.easeOut}, 0.5);
+	</script>
+</body>
+</html>
