@@ -1,0 +1,650 @@
+@font-face {
+    font-family: "Exodus Stencil";
+    src: url("fonts/exodusdemo-stencil-webfont.woff") format("woff"),
+    url("fonts/exodusdemo-stencil-webfont.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Butler Bold";
+    src: url("fonts/butler_bold-webfont.woff") format("woff"),
+    url("fonts/butler_bold-webfont.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Wask New";
+    src: url("fonts/wask_new-webfont.eot") format("eot"),
+    url("fonts/wask_new-webfont.woff") format("woff");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: url(../img/bg/dust_scratches.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: none;
+    color: #222;
+    /*in a minute, make it visibility hidden to start*/
+    /*visibility: hidden;*/
+}
+
+main {
+    margin: 0 auto;
+    width: 100%;
+}
+
+section {
+    padding: 20px 0 80px;
+    height: 100vh;
+}
+
+h2 {
+    font-size: 2.25rem;
+    /*    border-bottom: 2px solid #CCC;
+*/
+    padding-bottom: 20px;
+}
+
+
+
+/*navigation styles*/
+
+
+li {
+    width: 120px;
+    padding: 10px;
+    margin-bottom: 1px;
+    border-left: 10px solid #0e2956;
+    cursor: pointer;
+    color: #888;
+    list-style-type: none;
+    font-family: "Butler Bold", sans-serif;
+    font-size: 35px;
+}
+
+
+/*PRE-LOADER STYLES*/
+
+/*#preloader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 101;
+    background-color: #212121;
+    color: #ffffff;
+}
+
+#preloader .txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#preloader .txt-perc {
+    font-size: 35px;
+    font-family: 'Wask New', Arial, sans-serif;
+    opacity: 1;
+    margin: 0 0 6px 0;
+    max-width: 400px;
+    text-align: center;
+}
+
+#preloader .progress {
+    width: 100px;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 auto 15px auto;
+}
+
+#preloader .progress span {
+    display: block;
+    width: 0;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#preloader.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.is-loading {
+    overflow: hidden;
+}
+.header-container {
+}
+  .header-container .bcg {
+    -webkit-transition: -webkit-transform 4s ease-out;
+            transition: transform 4s ease-out;
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+    -webkit-transform-origin: top center;
+        -ms-transform-origin: top center;
+            transform-origin: top center; }
+  .header-container.is-loaded .bcg {
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1); }*/
+#menu {
+    display: inline;
+}
+
+#menuitem a {
+    cursor: pointer;
+}
+
+.active {
+    color: #555;
+    border-left: 20px solid #FFF;
+    line-height: 30px;
+}
+
+
+
+/* SIDE NAVIGATION MENU */
+
+.sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: #FFF;
+    background: url("../img/bg/dust_scratches.png");
+    /* dust n scratches bg*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+}
+
+
+/*BACKGROUND STYLES*/
+/*
+.bcg {
+    background: no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+#introPanel .bcg {
+    background: linear-gradient( rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.45)),
+    url("../img/bg/eberhard-grossgasteiger-311213_matte.png");
+    background-size: cover;
+}
+
+#factsPanel .bcg {
+    background: linear-gradient( rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.4)),
+    url("../img/bg/roosevelt-island.png");
+    background-size: cover;
+}
+
+#galleryPanel .bcg {
+    background: linear-gradient( rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.4)),
+    url("../img/bg/anders-jilden-307322.jpg");
+    background-size: cover;
+}
+#aboutPanel .bcg {
+    background: linear-gradient( rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.4)),
+    url("../img/bg/anders-jilden-307322.jpg");
+    background-size: cover;
+}
+*/
+
+/* The navigation menu links */
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 35px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+
+
+/* When you mouse over the navigation links, change their color */
+
+.sidenav a:hover {
+    color: #222;
+}
+
+
+
+/* Position and style the close scrlButton (top right corner) */
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+    width: 50px;
+    margin-top: 18px;
+    margin-left: 10px;
+    position: fixed;
+    left: 15px;
+    top: 20px;
+}
+
+.bar1,
+.bar2 {
+    width: 35px;
+    height: 3px;
+    background-color: #888;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+#contact {
+    position: absolute;
+    bottom: 50px;
+    font-family: "Wask New", serif;
+    letter-spacing: 1px;
+}
+
+#contact a {
+    margin: 0 auto;
+    display: block;
+    float: left;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.insta {}
+
+#menu h1 {
+    font-family: Arial, sans-serif;
+    padding-left: 15px;
+}
+
+#menuitem h1 a {
+    color: #4F535F;
+}
+
+
+
+#introPanel{
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ),
+  url("../img/bg/eberhard-grossgasteiger-311213_matte.png");
+
+  background-repeat: cover;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    font-family: "Exodus Stencil", Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 90px;
+    text-align: center;
+    color: white;
+    position: relative;
+    top: 30%;
+    -webkit-animation: logoAnim 5s infinite;
+    animation: logoAnim 5s infinite;
+}
+
+@-webkit-keyframes logoAnim {
+    0% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.6;
+    }
+}
+
+@keyframes logoAnim {
+    0% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.6;
+    }
+}
+
+.logo-description {
+    display: block;
+    margin: 0 auto;
+    font-family: "Exodus Stencil", Arial, sans-serif;
+    padding-top: 40px;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 3px;
+    position: relative;
+    top: 35%;
+    color: white;
+}
+
+.scrlBtn a {
+    position: absolute;
+    bottom: 20px;
+    left: 47.5%;
+    z-index: 2;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: #888;
+    font: normal 400 20px/1 'Wask New', sans-serif;
+    font-size: 1.2em;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity .3s;
+}
+
+.scrlBtn a:hover {
+    opacity: .5;
+}
+
+#scrlSection {
+    height: 0vh;
+}
+
+#scrlSection a {
+    padding-top: 80px;
+}
+
+#scrlSection a span {
+    position: absolute;
+    top: 0;
+    left: 47.5%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: scrlBtn 2s infinite;
+    animation: scrlBtn 2s infinite;
+    opacity: 0;
+    box-sizing: border-box;
+}
+
+#scrlSection a span:nth-of-type(1) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+#scrlSection a span:nth-of-type(2) {
+    top: 16px;
+    -webkit-animation-delay: .15s;
+    animation-delay: .15s;
+}
+
+#scrlSection a span:nth-of-type(3) {
+    top: 32px;
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
+}
+
+@-webkit-keyframes scrlBtn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes scrlBtn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#factsPanel {
+    background: linear-gradient( rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.4)),
+    url("../img/bg/roosevelt-island.png");
+    background-size: cover;
+}
+.factsList{
+
+}
+
+.fact-title{
+  font-family: "Wask New", Arial, sans-serif;
+  font-size: 1.6em;
+  color: #FFF;
+  max-height: 100px;
+  display: inline-block;
+  margin: 0 auto;
+  border: 2px solid #FFF;
+  border-color: rgba(255,255,255,0.3);
+  width: 200px;
+  float: left;
+  position: relative;
+  top: 22%;
+  left: 16%;
+  text-align: center;
+  margin: 40px;
+    -webkit-transition: opacity 0.6s ease-in-out;
+    -moz-transition: opacity 0.6s ease-in-out;
+    -ms-transition: opacity 0.6s ease-in-out;
+    -o-transition: opacity 0.6s ease-in-out;
+    transition: opacity 0.6s ease-in-out;
+    opacity: 0.5;
+}
+
+.fact-title:hover{
+  background-color: rgba(255,255,255,0.3);
+  opacity: 1;
+}
+
+
+.fact{
+  font-family: "Exodus Stencil", Arial, sans-serif;
+  font-size: 2.2em;
+  color: #FFF;
+  height: 50px;
+  padding-bottom: 25px;
+}
+
+.fact a{
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  opacity: 0.5;
+  color: #FFF;
+}
+
+.fact a:link{
+  text-decoration: none;
+}
+
+.fact a:visited{
+  text-decoration: none;
+}
+.fact a:hover{
+  color: rgba(14,65,86,1);
+  opacity: 1;
+}
+
+.major{
+
+  font-size: 1.2em;
+}
+
+.work{
+  font-size: 2em;
+}
+#galleryPanel {
+/*    background: linear-gradient( rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.4)),
+    url("../img/bg/hills-1.jpg");
+    background-size: cover;*/
+}
+
+.gallery-title{
+  font-family: "Exodus Stencil", Arial, sans-serif;
+  font-size: 4.5em;
+  text-align: center;
+  color: #FFF;
+  position: relative;
+  top: 45%;
+}
+/*code from midterm*/
+.slideshow-container {
+  width:100%;
+  position: relative;
+  margin: 0 auto;
+/*  z-index: -1;*/
+/*  margin-top: -10px;*/
+}
+.aSlides{
+  display: none;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 14px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: left;
+  display: inline-block;
+  max-width:100px;
+  left: 35px;
+  opacity: 0.5;
+  transition: opacity .25s ease-in-out;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 0;
+  opacity: 0.3;
+  transition: opacity .25s ease-in-out;
+}
+.active{
+  background-color: #717171;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+#aboutPanel {
+    background: linear-gradient( rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.4)),
+    url("../img/bg/tarun-ram-454974.jpg");
+    background-size: cover;
+}
+/* =============================================================================
+   Media Queries
+   ========================================================================== */
+
+/* Tablet Portrait size to Base 996px */
+@media only screen and (min-width: 768px) and (max-width: 995px) {}
+
+/* All Mobile Sizes */
+@media only screen and (max-width: 767px) {}
+
+/* Mobile Landscape Size to Tablet Portrait */
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+/* Mobile Portrait Size to Mobile Landscape Size */
+@media only screen and (max-width: 479px) {
+      .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+    .logo {
+        font-size: 60px;
+    }
+    .logo-description {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+    .scrlBtn a {
+      left:45%;
+        bottom: 5px;
+    }
+    .scrlBtn a span {
+        bottom: 5px;
+    }
+    .fact-title{
+      top: 1%;
+      margin-bottom: 15px;
+      opacity: 1;
+    }
+}
+
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SASS 101</title>
+    <link rel="stylesheet" type="text/css" href="CSS/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="gallery" id="gallery">
+            <ol class="thumbs">
+                <li data-thumb="top">top</li>
+                <li data-thumb="bottom">bottom</li>
+                <li>left</li>
+                <li>right</li>
+            </ol>
+            <div class="figure right" id="figure">
+                <img class="top" src="http://via.placeholder.com/350x150?text=top">
+                <img class="bottom" src="http://via.placeholder.com/350x150?text=bottom">
+                <img class="left" src="http://via.placeholder.com/350x150?text=left">
+                <img class="right" src="http://via.placeholder.com/350x150?text=right">
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+      //access a custom data attribute via JS
+      //toggle the visible image
+
+      //devlare some global variables
+      var gallery, figure, thumbs;
+      //wait for our content to load before applything event listeners
+      document.addEventListener('DOMContentLoaded', function(){
+        gallery = document.getElementById('gallery');
+        figure = document.getElementById('figure');
+        //grab all of our list items in our ol
+        thumbs = document.getElementsByTagName('LI');
+        console.log(thumbs);
+        //loop through them
+      })
+    </script>
+</body>
+
+</html>

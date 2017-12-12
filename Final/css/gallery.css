@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clear-fix::after {
+    display: block;
+    clear: both;
+    height: 0;
+    font-size: 0;
+    content: '';
+    visibility: hidden;
+}
+
+img {
+  max-width: 200px;
+}
