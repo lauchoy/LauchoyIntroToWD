@@ -1,8 +1,33 @@
+@font-face {
+    font-family: "Exodus Stencil";
+    src: url("fonts/exodusdemo-stencil-webfont.woff") format("woff"),
+    url("fonts/exodusdemo-stencil-webfont.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Butler Bold";
+    src: url("fonts/butler_bold-webfont.woff") format("woff"),
+    url("fonts/butler_bold-webfont.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Wask New";
+    src: url("fonts/wask_new-webfont.eot") format("eot"),
+    url("fonts/wask_new-webfont.woff") format("woff");
+}
+
+
 * {
     margin: 0;
     padding: 0;
 }
-
+html {
+    background: url(../img/bg/dust_scratches.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 .clear-fix::after {
     display: block;
     clear: both;
@@ -13,5 +38,17 @@
 }
 
 img {
-  max-width: 200px;
+  max-width: 275px;
+  min-width: 100px;
+  float: top;
+  position: relative;
+  top: 0%;
+}
+
+h1{
+  padding: 16px;
+  font-family: "Exodus Stencil";
+  font-size: 5.5em;
+  color: #000E2F;
+
 }

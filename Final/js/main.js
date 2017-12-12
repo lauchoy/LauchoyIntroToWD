@@ -97,16 +97,16 @@
 //     return preloaderOutTl;
 // }
 //main functions
-$(document).ready(function(){
+$(document).ready(function() {
     //make menu and page fade in on load
     //make the body tab invisible to start
-    TweenLite.from($('body'), 0.5, {autoAlpha: 0});
+    TweenLite.from($('body'), 0.5, { autoAlpha: 0 });
 
     //Grab each button by ID and assign them to variables
     var $floor4 = $('#introBtn'),
-    $floor3 = $('#factsBtn'),
-    $floor2 = $('#galleryBtn'),
-    $floor1 = $('#aboutBtn');
+        $floor3 = $('#factsBtn'),
+        $floor2 = $('#galleryBtn'),
+        $floor1 = $('#aboutBtn');
     $scrollDown = $('#scrlSection');
 
     //pass all of the list items as an array for our menu
@@ -114,11 +114,11 @@ $(document).ready(function(){
 
 
     //add and remove active class on mouse enter and leave
-    $navButtons.mouseenter(function(){
-        TweenLite.to(this, 0.2, {className:'+=active'});
+    $navButtons.mouseenter(function() {
+        TweenLite.to(this, 0.2, { className: '+=active' });
     });
-    $navButtons.mouseleave(function(){
-        TweenLite.to(this, 0.2, {className:'-=active'});
+    $navButtons.mouseleave(function() {
+        TweenLite.to(this, 0.2, { className: '-=active' });
     });
 
     //assign an HTML5 data attribute to each of our buttons
@@ -128,16 +128,16 @@ $(document).ready(function(){
     $floor1.attr('data-scrollPos', $('#aboutPanel').offset().top);
     $scrollDown.attr('data-scrollPos', $('#factsPanel').offset().top);
 
-    $navButtons.click(function(){
+    $navButtons.click(function() {
         var myScrollPosition = $(this).attr('data-scrollPos');
-        TweenLite.to(window,1,{scrollTo: myScrollPosition, ease: Power2.easeOut});
+        TweenLite.to(window, 1, { scrollTo: myScrollPosition, ease: Power2.easeOut });
     });
-    $scrollDown.click(function(){
-        TweenLite.to(window,1,{scrollTo: "#factsPanel", ease: Power2.easeOut});
+    $scrollDown.click(function() {
+        TweenLite.to(window, 1, { scrollTo: "#factsPanel", ease: Power2.easeOut });
     })
 
     var initialFloor = $('#introPanel').attr('data-scrollPos');
-    TweenLite.to(window,1,{scrollTo:initialFloor});
+    TweenLite.to(window, 1, { scrollTo: initialFloor });
 
 });
 /* Set the width of the side navigation to 250px */
@@ -152,35 +152,23 @@ function closeNav() {
     // document.body.style.backgroundColor = "white";
 }
 
-// midterm slideshow
-var docID = document.getElementsByTagName("section")[0].getAttribute("id");
+
 
 //integrate automatic + manual slideshow playing for homepage
-if (docID== "galleryPanel"){
-  var slideIndex = 1;
-  showSlides(slideIndex);
-  var timer = null;
 
-  function plusSlides(n) {
-    clearTimeout(timer);
-    showSlides(slideIndex += n);
-  }
+    var slideIndex = 0;
+    showSlides();
 
-  function currentSlide(n) {
-    clearTimeout(timer);
-    showSlides(slideIndex = n);
-  }
-  function showSlides(n) {
-      var i;
-      var aSlides = document.getElementsByClassName("aSlides");
-      if(n == undefined) { n = ++slideIndex }
-      if (n > aSlides.length) { slideIndex = 1 }
-      if (n < 1) { slideIndex = aSlides.length }
-      for (i = 0; i < aSlides.length; i++) {
-          aSlides[i].style.display = "none";
-      }
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("aSlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.display = "block";
 
-      aSlides[slideIndex - 1].style.display = "block";
-      timer = setTimeout(showSlides, 5000);
-  }
-}
+        setTimeout(showSlides, 3000); // Change image every 2 seconds
+    }
+
