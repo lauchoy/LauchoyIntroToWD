@@ -28,6 +28,10 @@ html {
     -o-background-size: cover;
     background-size: cover;
 }
+body{
+  padding-top: 20px;
+width: 100%;
+}
 .clear-fix::after {
     display: block;
     clear: both;
@@ -36,19 +40,101 @@ html {
     content: '';
     visibility: hidden;
 }
+/*a {
+   line-height: 0;
+    -webkit-column-count: 5;
+    -webkit-column-gap: 0px;
+    -moz-column-count: 5;
+    -moz-column-gap: 0px;
+     column-count: 5;
+     column-gap: 0px;
+}*/
+section{
+    line-height: 0;
+    -webkit-column-count: 5;
+    -webkit-column-gap: 0px;
+    -moz-column-count: 5;
+    -moz-column-gap: 0px;
+     column-count: 5;
+     column-gap: 0px;
+     overflow: hidden;
+}
+a img {
+   width: 100%;
+   height: auto;
+   display: inline-block;
 
-img {
-  max-width: 275px;
-  min-width: 100px;
-  float: top;
-  position: relative;
-  top: 0%;
+}
+a{
+  margin: 2px;
+     opacity: .6;
+    transition: opacity .3s ease-out;
+    -moz-transition: opacity .3s ease-out;
+    -webkit-transition: opacity .3s ease-out;
+    -o-transition: opacity .3s ease-out;
+/*   margin-right: auto;
+   margin-left: auto;
+   float: left;
+   column-count: 5;*/
+}
+a:hover{
+  opacity: 1;
+}
+h1{
+  padding-left: 10px;
+  padding-top: 6px;
+  font-family: "Wask New", Arial, sans-serif;
+  font-size: 2.5em;
+  color: #000E2F;
+  opacity: 0.8;
+  display: inline-block;
+  line-height:  100px;
+}
+.logo {
+    display: block;
+    float: left;
+    margin-left: 10px;
+    font-family: "Exodus Stencil", Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 90px;
+    text-align: center;
+    color: #000E2F;
+    position: relative;
+    top: 30%;
+    -webkit-animation: logoAnim 5s infinite;
+    animation: logoAnim 5s infinite;
+    z-index: -1;
 }
 
-h1{
-  padding: 16px;
-  font-family: "Exodus Stencil";
-  font-size: 5.5em;
-  color: #000E2F;
+@-webkit-keyframes logoAnim {
+    0% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.6;
+    }
+}
 
+@keyframes logoAnim {
+    0% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.6;
+    }
+}
+
+#footer{
+  font-size: 0.9em;
+  font-family: "Wask New", Arial, sans-serif;
+  float: right;
+  padding-right: 12px;
+  cursor: pointer;
 }
