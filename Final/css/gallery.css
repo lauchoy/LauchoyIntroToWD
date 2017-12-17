@@ -16,11 +16,109 @@
     url("fonts/wask_new-webfont.woff") format("woff");
 }
 
+.sk-cube-grid {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 48%;
+    left: 48%;
+}
+
+.sk-cube-grid .sk-cube {
+    width: 33%;
+    height: 33%;
+    background-color: #DDCED3;
+    float: left;
+    -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+    animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+}
+
+.sk-cube-grid .sk-cube1 {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.sk-cube-grid .sk-cube2 {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+.sk-cube-grid .sk-cube3 {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+.sk-cube-grid .sk-cube4 {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+
+.sk-cube-grid .sk-cube5 {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.sk-cube-grid .sk-cube6 {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+.sk-cube-grid .sk-cube7 {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+.sk-cube-grid .sk-cube8 {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+
+.sk-cube-grid .sk-cube9 {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+    0%,
+    70%,
+    100% {
+        -webkit-transform: scale3D(1, 1, 1);
+        transform: scale3D(1, 1, 1);
+    }
+    35% {
+        -webkit-transform: scale3D(0, 0, 1);
+        transform: scale3D(0, 0, 1);
+    }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+    0%,
+    70%,
+    100% {
+        -webkit-transform: scale3D(1, 1, 1);
+        transform: scale3D(1, 1, 1);
+    }
+    35% {
+        -webkit-transform: scale3D(0, 0, 1);
+        transform: scale3D(0, 0, 1);
+    }
+}
+
+.cube-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #262932;
+    z-index: 999999;
+}
 
 * {
     margin: 0;
     padding: 0;
 }
+
 html {
     background: url(../img/bg/dust_scratches.png) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -28,10 +126,12 @@ html {
     -o-background-size: cover;
     background-size: cover;
 }
-body{
-  padding-top: 20px;
-width: 100%;
+
+body {
+    padding-top: 20px;
+    width: 100%;
 }
+
 .clear-fix::after {
     display: block;
     clear: both;
@@ -40,58 +140,52 @@ width: 100%;
     content: '';
     visibility: hidden;
 }
-/*a {
-   line-height: 0;
-    -webkit-column-count: 5;
-    -webkit-column-gap: 0px;
-    -moz-column-count: 5;
-    -moz-column-gap: 0px;
-     column-count: 5;
-     column-gap: 0px;
-}*/
-section{
-    line-height: 0;
-    -webkit-column-count: 5;
-    -webkit-column-gap: 0px;
-    -moz-column-count: 5;
-    -moz-column-gap: 0px;
-     column-count: 5;
-     column-gap: 0px;
-     overflow: hidden;
-}
-a img {
-   width: 100%;
-   height: auto;
-   display: inline-block;
 
+section {
+    line-height: 0;
+    -webkit-column-count: 4;
+    -webkit-column-gap: 0px;
+    -moz-column-count: 4;
+    -moz-column-gap: 0px;
+    column-count: 4;
+    column-gap: 0px;
+    overflow: hidden;
 }
-a{
-  margin: 2px;
-     opacity: .6;
+
+a img {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+a {
+    opacity: .6;
     transition: opacity .3s ease-out;
     -moz-transition: opacity .3s ease-out;
     -webkit-transition: opacity .3s ease-out;
     -o-transition: opacity .3s ease-out;
-/*   margin-right: auto;
-   margin-left: auto;
-   float: left;
-   column-count: 5;*/
 }
-a:hover{
-  opacity: 1;
+
+a:hover {
+    opacity: 1;
 }
-h1{
-  padding-left: 10px;
-  padding-top: 6px;
-  font-family: "Wask New", Arial, sans-serif;
-  font-size: 2.5em;
-  color: #000E2F;
-  opacity: 0.8;
-  display: inline-block;
-  line-height:  100px;
+
+h1 {
+    padding-left: 10px;
+    padding-top: 6px;
+    font-family: "Wask New", Arial, sans-serif;
+    font-size: 2.5em;
+    color: #000E2F;
+    opacity: 0.6;
+    display: inline-block;
+    line-height: 100px;
+    position: relative;
+    bottom: 24px;
+    height: 80px;
 }
+
 .logo {
-    display: block;
+    display: inline-block;
     float: left;
     margin-left: 10px;
     font-family: "Exodus Stencil", Arial, sans-serif;
@@ -104,37 +198,168 @@ h1{
     top: 30%;
     -webkit-animation: logoAnim 5s infinite;
     animation: logoAnim 5s infinite;
-    z-index: -1;
+    /*    z-index: -1;
+*/
+    opacity: 1;
 }
 
 @-webkit-keyframes logoAnim {
     0% {
-        opacity: 0.6;
-    }
-    50% {
         opacity: 1;
     }
+    50% {
+        opacity: 0.5;
+    }
     100% {
-        opacity: 0.6;
+        opacity: 1;
     }
 }
 
 @keyframes logoAnim {
     0% {
-        opacity: 0.6;
-    }
-    50% {
         opacity: 1;
     }
+    50% {
+        opacity: 0.5;
+    }
     100% {
-        opacity: 0.6;
+        opacity: 1;
     }
 }
 
-#footer{
-  font-size: 0.9em;
-  font-family: "Wask New", Arial, sans-serif;
-  float: right;
-  padding-right: 12px;
-  cursor: pointer;
+.logo::hover {
+    opacity: 1;
+    cursor: pointer;
+    animation-play-state: paused;
+}
+
+.logo-box {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    animation-play-state: paused;
+}
+
+#footer {
+    font-size: 0.9em;
+    font-family: "Wask New", Arial, sans-serif;
+    float: right;
+    padding-right: 12px;
+    cursor: pointer;
+}
+
+
+
+/* =============================================================================
+   Media Queries
+   ========================================================================== */
+
+
+/* Tablet Portrait size to Base 996px */
+
+@media only screen and (min-width: 768px) and (max-width: 995px) {
+    section {
+        -webkit-column-count: 3;
+        -webkit-column-gap: 0px;
+        -moz-column-count: 3;
+        -moz-column-gap: 0px;
+        column-count: 3;
+        column-gap: 0px;
+    }
+    a {
+        opacity: 1;
+    }
+    h1 {
+        font-size: 2.5em;
+        line-height: 0px;
+        top: -8px;
+        height: 20px;
+    }
+    .logo {
+        font-size: 60px;
+        top: 10%;
+    }
+}
+
+
+/* All Mobile Sizes */
+
+@media only screen and (max-width: 767px) {
+    section {
+        -webkit-column-count: 3;
+        -webkit-column-gap: 0px;
+        -moz-column-count: 3;
+        -moz-column-gap: 0px;
+        column-count: 3;
+        column-gap: 0px;
+    }
+    a {
+        opacity: 1;
+    }
+    h1 {
+        font-size: 2.5em;
+        line-height: 0px;
+        top: -8px;
+        height: 20px;
+    }
+    .logo {
+        font-size: 60px;
+        top: 10%;
+    }
+}
+
+
+
+/* Mobile Landscape Size to Tablet Portrait */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    section {
+        -webkit-column-count: 2;
+        -webkit-column-gap: 0px;
+        -moz-column-count: 2;
+        -moz-column-gap: 0px;
+        column-count: 2;
+        column-gap: 0px;
+    }
+    a {
+        opacity: 1;
+    }
+    h1 {
+        font-size: 1.5em;
+        line-height: 0px;
+        top: -8px;
+        height: 20px;
+    }
+    .logo {
+        font-size: 30px;
+        top: 10%;
+    }
+}
+
+
+/* Mobile Portrait Size to Mobile Landscape Size */
+
+@media only screen and (max-width: 479px) {
+    section {
+        -webkit-column-count: 1;
+        -webkit-column-gap: 0px;
+        -moz-column-count: 1;
+        -moz-column-gap: 0px;
+        column-count: 1;
+        column-gap: 0px;
+    }
+    a {
+        opacity: 1;
+    }
+    h1 {
+        font-size: 1.5em;
+        line-height: 0px;
+        top: -8px;
+        height: 20px;
+    }
+    .logo {
+        font-size: 30px;
+        top: 10%;
+    }
 }

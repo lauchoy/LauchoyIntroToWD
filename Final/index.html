@@ -3,16 +3,27 @@
 
 <head>
     <title>JIMMY LAUCHOY</title>
+    <link rel="icon" type="image/png" href="img/favicon/icon-2.png">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <!--     <link rel="stylesheet" type="text/css" href="css/animsition.min.css"> -->
-    <!--     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
-    <!--     <script src="js/animsition.min.js"></script> -->
 </head>
 
-<body>
+<body id="index">
+    <div class="cube-wrapper">
+        <div class="sk-cube-grid">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
+        </div>
+    </div>
     <!-- menu items -->
     <div id="menu" class="sidenav">
         <div>
@@ -52,8 +63,6 @@
         <!-- FS = FIRST SLIDE -->
         <section id="introPanel" class="header-container fs">
             <img class="bcg" style="display: none;" src="img/bg/eberhard-grossgasteiger-311213_matte.png" alt="">
-            <!--             <div class="bcg"></div>
- -->
             <h2 class="logo">JIMMY LAUCHOY</h2>
             <h1 class="logo-description">Designer . Developer . Creative</h1>
             <section id="scrlSection" class="scrlBtn">
@@ -107,14 +116,16 @@
             <section class="gallery-title">Portfolio
                 <a class="gallery-explore" href="gallery.html"> Explore</a>
             </section>
-            <!--             <img class="bcg" style="display: none;" src="img/bg/anders-jilden-307322.jpg" alt=""> -->
         </section>
         <section id="aboutPanel">
             <img class="bcg" style="display: none;" src="img/bg/hills-1.jpg" alt="">
             <section class="circle-crop">
-                <section class="head-photo"></section>
+                <a href="img/Jimmy_Lauchoy_Resume.pdf" target="_blank">
+                    <section class="head-photo"></section>
+                </a>
             </section>
-            <p class="bio">Jimmy Lauchoy is a self-taught creative artist raised in NYC. He spends most of his free time exploring the city and planning shoots with friends or clients. He is known for his vibrant landscape photographs and striking portraits, as well as his ability to experiment with various light forms such as off-camera lighting and light painting. He is actively looking for opportunities to collaborate with other creative artists and to share his art form with others. </p>
+            <p class="bio">Jimmy Lauchoy is a self-taught creative artist raised in NYC. He spends most of his free time exploring the city and planning shoots with friends or clients. He is known for his vibrant landscape photographs and striking portraits, as well as his ability to experiment with various light forms such as off-camera lighting and light painting. He is actively looking for opportunities to collaborate with other creative artists and to share his art form with others. Click/ Tap on the photo to see his resume!</p>
+            <h1 id="footer">&copy; Jimmy Lauchoy 2017</h1>
         </section>
     </main>
     </div>
@@ -129,6 +140,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TimelineMax.min.js"></script>
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <!-- using jquery 2.2.4 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <!-- external JS file -->
     <script type="text/javascript" src="js/main.js"></script>
